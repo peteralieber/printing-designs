@@ -10,7 +10,7 @@ Steps:
 - Preserve the original model intent unless the user requests a change in scope.
 - Make the update as surgical as possible.
 - Keep parameterization readable and consistent with the repo's style.
-- Re-render the result after the change and report the visual outcome.
+- Re-render the result after the change using `scripts/render-scad.ps1` (Windows) or `scripts/render-scad.sh` (macOS/Linux), and report the visual outcome.
 
 Requested change:
 {your specification}
@@ -18,5 +18,5 @@ Requested change:
 Deliver:
 1. What changed and why
 2. Updated source
-3. Render validation step performed
+3. Render validation step performed, including the exact script command used from `scripts/`
 4. Remaining considerations for more refinement

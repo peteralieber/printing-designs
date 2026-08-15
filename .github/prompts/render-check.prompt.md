@@ -7,7 +7,7 @@ Render the selected OpenSCAD design and inspect the output for obvious issues.
 
 Use the repository workflow:
 - choose the source file under `designs/`
-- render it with `openscad` using a CLI command
+- render it with `scripts/render-scad.ps1` (Windows) or `scripts/render-scad.sh` (macOS/Linux)
 - save output to `renders/` if appropriate
 - describe any geometry, fit, or printability issues found
 
