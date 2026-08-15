@@ -1,5 +1,5 @@
 ---
-mode: 'agent'
+agent: 'agent'
 description: 'Improve an OpenSCAD design for printability, strength, or fit.'
 ---
 

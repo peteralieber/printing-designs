@@ -1,5 +1,5 @@
 ---
-mode: 'agent'
+agent: 'agent'
 description: 'Render and review a SCAD design from the command line.'
 ---
 

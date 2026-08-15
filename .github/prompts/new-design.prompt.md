@@ -1,5 +1,5 @@
 ---
-mode: 'agent'
+agent: 'agent'
 description: 'Create a new OpenSCAD design from a design brief.'
 ---
 
