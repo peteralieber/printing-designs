@@ -10,7 +10,7 @@
 #   fill: fills the box from "from" to "to" (inclusive) with "block"
 #   set:  places a single "block" at "at"
 #
-# Block names are Minecraft Java Edition namespaced IDs.
+# Block names and state properties use Minecraft Bedrock Edition syntax.
 # The AHK builder (build.ahk) executes these operations in order.
 
 name: mountain-hideout
@@ -20,73 +20,73 @@ size: { x: 18, y: 15, z: 19 }  # includes balcony (z < 0) and tower (x > 15)
 
 operations:
   # --- Foundation and ground floor ---
-  - { op: fill, from: [0, -1, 0],  to: [15, -1, 13], block: "minecraft:cobblestone" }
-  - { op: fill, from: [0, 0, 0],   to: [15, 0, 13],  block: "minecraft:spruce_planks" }
+  - { op: fill, from: [0, -1, 0],  to: [15, -1, 13], block: "cobblestone" }
+  - { op: fill, from: [0, 0, 0],   to: [15, 0, 13],  block: "spruce_planks" }
 
   # --- Ground floor walls (y 1-4) ---
-  - { op: fill, from: [0, 1, 0],   to: [15, 4, 0],   block: "minecraft:deepslate_bricks" }   # front
-  - { op: fill, from: [0, 1, 13],  to: [15, 4, 13],  block: "minecraft:deepslate_bricks" }   # back
-  - { op: fill, from: [0, 1, 1],   to: [0, 4, 12],   block: "minecraft:deepslate_bricks" }   # left
-  - { op: fill, from: [15, 1, 1],  to: [15, 4, 12],  block: "minecraft:deepslate_bricks" }   # right
-  - { op: fill, from: [0, 1, 0],   to: [0, 4, 0],    block: "minecraft:spruce_log" }         # corner pillars
-  - { op: fill, from: [15, 1, 0],  to: [15, 4, 0],   block: "minecraft:spruce_log" }
-  - { op: fill, from: [0, 1, 13],  to: [0, 4, 13],   block: "minecraft:spruce_log" }
-  - { op: fill, from: [15, 1, 13], to: [15, 4, 13],  block: "minecraft:spruce_log" }
+  - { op: fill, from: [0, 1, 0],   to: [15, 4, 0],   block: "deepslate_bricks" }   # front
+  - { op: fill, from: [0, 1, 13],  to: [15, 4, 13],  block: "deepslate_bricks" }   # back
+  - { op: fill, from: [0, 1, 1],   to: [0, 4, 12],   block: "deepslate_bricks" }   # left
+  - { op: fill, from: [15, 1, 1],  to: [15, 4, 12],  block: "deepslate_bricks" }   # right
+  - { op: fill, from: [0, 1, 0],   to: [0, 4, 0],    block: "spruce_log" }         # corner pillars
+  - { op: fill, from: [15, 1, 0],  to: [15, 4, 0],   block: "spruce_log" }
+  - { op: fill, from: [0, 1, 13],  to: [0, 4, 13],   block: "spruce_log" }
+  - { op: fill, from: [15, 1, 13], to: [15, 4, 13],  block: "spruce_log" }
 
   # --- Ground floor openings and features (front wall, z = 0) ---
-  - { op: fill, from: [7, 1, 0],   to: [8, 2, 0],    block: "minecraft:air" }                # double doorway
-  - { op: fill, from: [2, 2, 0],   to: [3, 3, 0],    block: "minecraft:glass" }              # left window
-  - { op: fill, from: [10, 2, 0],  to: [13, 3, 0],   block: "minecraft:chiseled_bookshelf" } # feature wall
+  - { op: fill, from: [7, 1, 0],   to: [8, 2, 0],    block: "air" }                # double doorway
+  - { op: fill, from: [2, 2, 0],   to: [3, 3, 0],    block: "glass" }              # left window
+  - { op: fill, from: [10, 2, 0],  to: [13, 3, 0],   block: "chiseled_bookshelf" } # feature wall
 
   # --- Second floor ---
-  - { op: fill, from: [0, 5, 0],   to: [15, 5, 13],  block: "minecraft:spruce_planks" }
+  - { op: fill, from: [0, 5, 0],   to: [15, 5, 13],  block: "spruce_planks" }
 
   # --- Upper walls (y 6-9) ---
-  - { op: fill, from: [0, 6, 0],   to: [15, 9, 0],   block: "minecraft:deepslate_bricks" }   # front
-  - { op: fill, from: [0, 6, 13],  to: [15, 9, 13],  block: "minecraft:deepslate_bricks" }   # back
-  - { op: fill, from: [0, 6, 1],   to: [0, 9, 12],   block: "minecraft:deepslate_bricks" }   # left
-  - { op: fill, from: [15, 6, 1],  to: [15, 9, 12],  block: "minecraft:deepslate_bricks" }   # right
-  - { op: fill, from: [0, 6, 0],   to: [0, 9, 0],    block: "minecraft:spruce_log" }         # corner pillars
-  - { op: fill, from: [15, 6, 0],  to: [15, 9, 0],   block: "minecraft:spruce_log" }
-  - { op: fill, from: [0, 6, 13],  to: [0, 9, 13],   block: "minecraft:spruce_log" }
-  - { op: fill, from: [15, 6, 13], to: [15, 9, 13],  block: "minecraft:spruce_log" }
+  - { op: fill, from: [0, 6, 0],   to: [15, 9, 0],   block: "deepslate_bricks" }   # front
+  - { op: fill, from: [0, 6, 13],  to: [15, 9, 13],  block: "deepslate_bricks" }   # back
+  - { op: fill, from: [0, 6, 1],   to: [0, 9, 12],   block: "deepslate_bricks" }   # left
+  - { op: fill, from: [15, 6, 1],  to: [15, 9, 12],  block: "deepslate_bricks" }   # right
+  - { op: fill, from: [0, 6, 0],   to: [0, 9, 0],    block: "spruce_log" }         # corner pillars
+  - { op: fill, from: [15, 6, 0],  to: [15, 9, 0],   block: "spruce_log" }
+  - { op: fill, from: [0, 6, 13],  to: [0, 9, 13],   block: "spruce_log" }
+  - { op: fill, from: [15, 6, 13], to: [15, 9, 13],  block: "spruce_log" }
 
   # --- Upper facade: recessed nether portal (front wall) ---
-  - { op: fill, from: [6, 6, 0],   to: [9, 9, 0],    block: "minecraft:obsidian" }           # portal frame
-  - { op: fill, from: [7, 7, 0],   to: [8, 8, 0],    block: "minecraft:air" }                # portal interior
-  - { op: fill, from: [0, 7, 5],   to: [0, 8, 7],    block: "minecraft:glass" }              # left upper window
-  - { op: fill, from: [15, 7, 5],  to: [15, 8, 7],   block: "minecraft:glass" }              # right upper window
+  - { op: fill, from: [6, 6, 0],   to: [9, 9, 0],    block: "obsidian" }           # portal frame
+  - { op: fill, from: [7, 7, 0],   to: [8, 8, 0],    block: "air" }                # portal interior
+  - { op: fill, from: [0, 7, 5],   to: [0, 8, 7],    block: "glass" }              # left upper window
+  - { op: fill, from: [15, 7, 5],  to: [15, 8, 7],  block: "glass" }              # right upper window
 
   # --- Balcony (extends toward the player, z < 0) ---
-  - { op: fill, from: [0, 5, -3],  to: [15, 5, -1],  block: "minecraft:spruce_planks" }      # deck
-  - { op: fill, from: [0, 6, -3],  to: [15, 6, -3],  block: "minecraft:spruce_fence" }       # front railing
-  - { op: fill, from: [0, 6, -2],  to: [0, 6, -1],   block: "minecraft:spruce_fence" }       # left railing
-  - { op: fill, from: [15, 6, -2], to: [15, 6, -1],  block: "minecraft:spruce_fence" }       # right railing
+  - { op: fill, from: [0, 5, -3],  to: [15, 5, -1],  block: "spruce_planks" }      # deck
+  - { op: fill, from: [0, 6, -3],  to: [15, 6, -3],  block: "spruce_fence" }       # front railing
+  - { op: fill, from: [0, 6, -2],  to: [0, 6, -1],   block: "spruce_fence" }       # left railing
+  - { op: fill, from: [15, 6, -2], to: [15, 6, -1],  block: "spruce_fence" }       # right railing
 
   # --- Roof (top-half slabs, 1-block overhang) ---
-  - { op: fill, from: [-1, 10, -1], to: [16, 10, 14], block: "minecraft:spruce_slab[type=top]" }
+  - { op: fill, from: [-1, 10, -1], to: [16, 10, 14], block: 'spruce_slab["minecraft:vertical_half"="top"]' }
 
   # --- Watchtower (right-rear, red nether brick) ---
-  - { op: fill, from: [16, 0, 9],  to: [20, 12, 13], block: "minecraft:red_nether_bricks" }  # tower body
-  - { op: fill, from: [16, 13, 9], to: [20, 13, 13], block: "minecraft:red_nether_bricks" }  # battlement ring
-  - { op: fill, from: [17, 13, 10], to: [19, 13, 12], block: "minecraft:air" }               # hollow top
-  - { op: set,  at: [16, 14, 9],   block: "minecraft:red_nether_brick_wall" }                # crenellations
-  - { op: set,  at: [20, 14, 9],   block: "minecraft:red_nether_brick_wall" }
-  - { op: set,  at: [16, 14, 13],  block: "minecraft:red_nether_brick_wall" }
-  - { op: set,  at: [20, 14, 13],  block: "minecraft:red_nether_brick_wall" }
-  - { op: set,  at: [18, 14, 11],  block: "minecraft:red_nether_brick_wall" }
-  - { op: fill, from: [15, 6, 11], to: [16, 7, 11],  block: "minecraft:air" }                # 2nd-floor link to tower
+  - { op: fill, from: [16, 0, 9],  to: [20, 12, 13], block: "red_nether_bricks" }  # tower body
+  - { op: fill, from: [16, 13, 9], to: [20, 13, 13], block: "red_nether_bricks" }  # battlement ring
+  - { op: fill, from: [17, 13, 10], to: [19, 13, 12], block: "air" }               # hollow top
+  - { op: set,  at: [16, 14, 9],   block: "red_nether_brick_wall" }                # crenellations
+  - { op: set,  at: [20, 14, 9],   block: "red_nether_brick_wall" }
+  - { op: set,  at: [16, 14, 13],  block: "red_nether_brick_wall" }
+  - { op: set,  at: [20, 14, 13],  block: "red_nether_brick_wall" }
+  - { op: set,  at: [18, 14, 11],  block: "red_nether_brick_wall" }
+  - { op: fill, from: [15, 6, 11], to: [16, 7, 11],  block: "air" }                # 2nd-floor link to tower
 
   # --- Exterior stairs up to the balcony (front-left) ---
-  - { op: set,  at: [-1, 1, -6],   block: "minecraft:spruce_stairs[facing=east]" }
-  - { op: set,  at: [-1, 2, -5],   block: "minecraft:spruce_stairs[facing=east]" }
-  - { op: set,  at: [-1, 3, -4],   block: "minecraft:spruce_stairs[facing=east]" }
-  - { op: set,  at: [-1, 4, -3],   block: "minecraft:spruce_stairs[facing=east]" }
-  - { op: set,  at: [-1, 5, -2],   block: "minecraft:spruce_stairs[facing=east]" }
+  - { op: set,  at: [-1, 1, -6],   block: 'spruce_stairs["minecraft:corner"="none","upside_down_bit"=false,"weirdo_direction"=0]' }
+  - { op: set,  at: [-1, 2, -5],   block: 'spruce_stairs["minecraft:corner"="none","upside_down_bit"=false,"weirdo_direction"=0]' }
+  - { op: set,  at: [-1, 3, -4],   block: 'spruce_stairs["minecraft:corner"="none","upside_down_bit"=false,"weirdo_direction"=0]' }
+  - { op: set,  at: [-1, 4, -3],   block: 'spruce_stairs["minecraft:corner"="none","upside_down_bit"=false,"weirdo_direction"=0]' }
+  - { op: set,  at: [-1, 5, -2],   block: 'spruce_stairs["minecraft:corner"="none","upside_down_bit"=false,"weirdo_direction"=0]' }
 
   # --- Lanterns ---
-  - { op: set,  at: [0, 7, -3],    block: "minecraft:lantern" }                              # balcony corners
-  - { op: set,  at: [15, 7, -3],   block: "minecraft:lantern" }
-  - { op: set,  at: [4, 4, 6],     block: "minecraft:lantern[hanging=true]" }                # ground floor
-  - { op: set,  at: [11, 4, 6],    block: "minecraft:lantern[hanging=true]" }
-  - { op: set,  at: [7, 9, 6],     block: "minecraft:lantern[hanging=true]" }                # upper floor
+  - { op: set,  at: [0, 7, -3],    block: "lantern" }                              # balcony corners
+  - { op: set,  at: [15, 7, -3],   block: "lantern" }
+  - { op: set,  at: [4, 4, 6],     block: 'lantern["hanging"=true]' }                # ground floor
+  - { op: set,  at: [11, 4, 6],    block: 'lantern["hanging"=true]' }
+  - { op: set,  at: [7, 9, 6],     block: 'lantern["hanging"=true]' }                # upper floor

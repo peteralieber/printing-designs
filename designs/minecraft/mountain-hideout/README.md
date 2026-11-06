@@ -9,7 +9,7 @@ exterior staircase, and a tall red-brick watchtower.
 
 - `README.md` — this document.
 - `structure.yaml` — the canonical build data: every block region as
-  coordinates + block type, relative to the player position.
+  coordinates + Bedrock block type/state, relative to the player position.
 - `build.ahk` — AutoHotkey v2 script that drives the Minecraft player to
   place all blocks (via chat `/fill` and `/setblock` commands).
 
@@ -44,8 +44,9 @@ and foundation).
 
 ## Building in game
 
-1. Install [AutoHotkey v2](https://www.autohotkey.com/).
-2. Open Minecraft Java Edition in a world with **cheats enabled**
+1. Install [AutoHotkey v2](https://www.autohotkey.com/) on Windows.
+2. Open Minecraft Bedrock Edition 1.26.50 or later in a world with
+   **cheats enabled**
    (creative mode recommended).
 3. Stand where you want the front-left-bottom corner of the building to be.
 4. Run `build.ahk`, focus the Minecraft window.
@@ -56,3 +57,7 @@ and foundation).
 The script types each operation into the chat as a `/fill` or `/setblock`
 command using relative (`~`) coordinates, so the whole build is placed
 relative to your position.
+
+The commands use Bedrock block IDs and block-state syntax. The stair direction,
+upper roof slabs, and hanging lanterns use Bedrock-specific block states; the
+same coordinates and build operations are retained in `structure.yaml`.
